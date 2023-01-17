@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>lab_dotnet.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:lab_dotnet.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions">
+            <summary>
+            Application builder extensions
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseAuthorizationConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use authorization configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use serilog configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use swagger configuration
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions">
+            <summary>
+            Services extensions
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddAuthorizationConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add authorization configuration
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddDbContextConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add dbcontext configuration
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddMapperConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add mappper configuration
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSwaggerConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add swagger settings
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddVersioningConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure versioning
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.AppUserController">
+            <summary>
+            AppUser endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.#ctor(lab_dotnet.Services.Abstract.IAppUserService,AutoMapper.IMapper)">
+            <summary>
+            AppUser controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.DeleteAppUser(System.Guid)">
+            <summary>
+            Delete app user
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.GetAppUser(System.Guid)">
+            <summary>
+            Get app user
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.GetAppUsers(System.Int32,System.Int32)">
+            <summary>
+            Get app users
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.GetAppUsersByAccessLevel(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get app users by access level
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.GetAppUsersByJobTitleId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get app users by job title id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AppUserController.UpdateAppUser(System.Guid,lab_dotnet.WebAPI.Models.UpdateAppUserRequest)">
+            <summary>
+            Update app user
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.AuthController">
+            <summary>
+            Auth endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AuthController.#ctor(lab_dotnet.Services.Abstract.IAuthService,AutoMapper.IMapper)">
+            <summary>
+            Auth controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AuthController.RegisterUser(lab_dotnet.WebAPI.Models.RegisterUserRequest)">
+            <summary>
+            Register app user
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.AuthController.LoginUser(lab_dotnet.WebAPI.Models.LoginUserRequest)">
+            <summary>
+            Login app user
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.BorrowerController">
+            <summary>
+            Borrowers endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.#ctor(lab_dotnet.Services.Abstract.IBorrowerService,AutoMapper.IMapper)">
+            <summary>
+            Borrowers controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.CreateBorrower(lab_dotnet.WebAPI.Models.BorrowerRequest)">
+            <summary>
+            Create borrower
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.DeleteBorrower(System.Guid)">
+            <summary>
+            Delete borrower
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.GetBorrowerById(System.Guid)">
+            <summary>
+            Get borrower by id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.GetBorrowerByPassport(lab_dotnet.WebAPI.Models.PassportRequest)">
+            <summary>
+            Get borrower by passport
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.GetBorrowers(System.Int32,System.Int32)">
+            <summary>
+            Get borrowers
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.BorrowerController.UpdateBorrower(System.Guid,lab_dotnet.WebAPI.Models.UpdateBorrowerRequest)">
+            <summary>
+            Update borrower
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.ContributionController">
+            <summary>
+            Contribution endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.#ctor(lab_dotnet.Services.Abstract.IContributionService,AutoMapper.IMapper)">
+            <summary>
+            Contribution controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.CreateContribution(lab_dotnet.WebAPI.Models.ContributionRequest)">
+            <summary>
+            Create contribution
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.DeleteContribution(System.Guid)">
+            <summary>
+            Delete contribution
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.GetContribution(System.Guid)">
+            <summary>
+            Get contribution
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.GetContributions(System.Int32,System.Int32)">
+            <summary>
+            Get contributions
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.GetContributionsByBorrowerId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get contributions by borrower id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.GetContributionsByContributorId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get contributions by contributor id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributionController.UpdateContribution(System.Guid,lab_dotnet.WebAPI.Models.UpdateContributionRequest)">
+            <summary>
+            Update contribution
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.ContributorController">
+            <summary>
+            Contributor endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributorController.#ctor(lab_dotnet.Services.Abstract.IContributorService,AutoMapper.IMapper)">
+            <summary>
+            Contributor controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributorController.CreateContributor(lab_dotnet.WebAPI.Models.ContributorRequest)">
+            <summary>
+            Create contributor
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributorController.DeleteContributor(System.Guid)">
+            <summary>
+            Delete contributor
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributorController.GetContributor(System.Guid)">
+            <summary>
+            Get contributor
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributorController.GetContributors(System.Int32,System.Int32)">
+            <summary>
+            Get contributors
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.ContributorController.UpdateContributor(System.Guid,lab_dotnet.WebAPI.Models.UpdateContributorRequest)">
+            <summary>
+            Update contributor
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.CreditApplicationController">
+            <summary>
+            CreditApplication endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.#ctor(lab_dotnet.Services.Abstract.ICreditApplicationService,AutoMapper.IMapper)">
+            <summary>
+            CreditApplication controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.CreateCreditApplication(lab_dotnet.WebAPI.Models.CreditApplicationRequest)">
+            <summary>
+            Create credit application
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.DeleteCreditApplication(System.Guid)">
+            <summary>
+            Delete credit application
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.GetCreditApplication(System.Guid)">
+            <summary>
+            Get credit application
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.GetCreditApplications(System.Int32,System.Int32)">
+            <summary>
+            Get credit applications
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.GetCreditApplicationsByBorrowerId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get credit applications by borrower id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.GetCreditApplicationsByCreditTypeId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get credit applications by credit type id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.GetCreditApplicationsByCreditorId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get credit applications by creditor id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditApplicationController.UpdateCreditApplication(System.Guid,lab_dotnet.WebAPI.Models.UpdateCreditApplicationRequest)">
+            <summary>
+            Update credit application
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.CreditController">
+            <summary>
+            Credit endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.#ctor(lab_dotnet.Services.Abstract.ICreditService,AutoMapper.IMapper)">
+            <summary>
+            Credit controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.CreateCredit(lab_dotnet.WebAPI.Models.CreditRequest)">
+            <summary>
+            Create credit
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.DeleteCredit(System.Guid)">
+            <summary>
+            Delete credit
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.GetCredit(System.Guid)">
+            <summary>
+            Get credit
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.GetCredits(System.Int32,System.Int32)">
+            <summary>
+            Get credits
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.GetCreditsByBorrowerId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get credits by borrower id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditController.UpdateCredit(System.Guid,lab_dotnet.WebAPI.Models.UpdateCreditRequest)">
+            <summary>
+            Update credit
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.CreditorController">
+            <summary>
+            Creditor endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditorController.#ctor(lab_dotnet.Services.Abstract.ICreditorService,AutoMapper.IMapper)">
+            <summary>
+            Creditor controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditorController.CreateCreditor(lab_dotnet.WebAPI.Models.CreditorRequest)">
+            <summary>
+            Create creditor
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditorController.DeleteCreditor(System.Guid)">
+            <summary>
+            Delete creditor
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditorController.GetCreditor(System.Guid)">
+            <summary>
+            Get creditor
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditorController.GetCreditors(System.Int32,System.Int32)">
+            <summary>
+            Get creditors
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditorController.UpdateCreditor(System.Guid,lab_dotnet.WebAPI.Models.UpdateCreditorRequest)">
+            <summary>
+            Update creditor
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.CreditTypeController">
+            <summary>
+            CreditType endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditTypeController.#ctor(lab_dotnet.Services.Abstract.ICreditTypeService,AutoMapper.IMapper)">
+            <summary>
+            CreditType controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditTypeController.CreateCreditType(lab_dotnet.WebAPI.Models.CreditTypeRequest)">
+            <summary>
+            Create credit type
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditTypeController.DeleteCreditType(System.Guid)">
+            <summary>
+            Delete credit type
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditTypeController.GetCreditType(System.Guid)">
+            <summary>
+            Get credit type
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditTypeController.GetCreditTypes(System.Int32,System.Int32)">
+            <summary>
+            Get credit types
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.CreditTypeController.UpdateCreditType(System.Guid,lab_dotnet.WebAPI.Models.UpdateCreditTypeRequest)">
+            <summary>
+            Update credit type
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.JobTitleController">
+            <summary>
+            JobTitle endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.JobTitleController.#ctor(lab_dotnet.Services.Abstract.IJobTitleService,AutoMapper.IMapper)">
+            <summary>
+            JobTitle controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.JobTitleController.CreateJobTitle(lab_dotnet.WebAPI.Models.JobTitleRequest)">
+            <summary>
+            Create job title
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.JobTitleController.DeleteJobTitle(System.Guid)">
+            <summary>
+            Delete job title
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.JobTitleController.GetJobTitle(System.Guid)">
+            <summary>
+            Get job title
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.JobTitleController.GetJobTitles(System.Int32,System.Int32)">
+            <summary>
+            Get job titles
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.JobTitleController.UpdateJobTitle(System.Guid,lab_dotnet.WebAPI.Models.UpdateJobTitleRequest)">
+            <summary>
+            Update job title
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.PassportIssuerController">
+            <summary>
+            PassportIssuer endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PassportIssuerController.#ctor(lab_dotnet.Services.Abstract.IPassportIssuerService,AutoMapper.IMapper)">
+            <summary>
+            PassportIssuer controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PassportIssuerController.CreatePassportIssuer(lab_dotnet.WebAPI.Models.PassportIssuerRequest)">
+            <summary>
+            Create passport issuer
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PassportIssuerController.DeletePassportIssuer(System.Guid)">
+            <summary>
+            Delete passport issuer
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PassportIssuerController.GetPassportIssuer(System.Guid)">
+            <summary>
+            Get passport issuer
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PassportIssuerController.GetPassportIssuers(System.Int32,System.Int32)">
+            <summary>
+            Get passport issuers
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PassportIssuerController.UpdatePassportIssuer(System.Guid,lab_dotnet.WebAPI.Models.UpdatePassportIssuerRequest)">
+            <summary>
+            Update passport issuer
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.PaymentController">
+            <summary>
+            Payment endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.#ctor(lab_dotnet.Services.Abstract.IPaymentService,AutoMapper.IMapper)">
+            <summary>
+            Payment controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.CreatePayment(lab_dotnet.WebAPI.Models.PaymentRequest)">
+            <summary>
+            Create payment
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.DeletePayment(System.Guid)">
+            <summary>
+            Delete payment
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.GetPayment(System.Guid)">
+            <summary>
+            Get payment
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.GetPayments(System.Int32,System.Int32)">
+            <summary>
+            Get payments
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.GetPaymentsByCreditId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get payments by credit id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.PaymentController.UpdatePayment(System.Guid,lab_dotnet.WebAPI.Models.UpdatePaymentRequest)">
+            <summary>
+            Update payment
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.RequestController">
+            <summary>
+            Request endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.#ctor(lab_dotnet.Services.Abstract.IRequestService,AutoMapper.IMapper)">
+            <summary>
+            Request controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.CreateRequest(lab_dotnet.WebAPI.Models.RequestRequest)">
+            <summary>
+            Create request
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.DeleteRequest(System.Guid)">
+            <summary>
+            Delete request
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.GetRequest(System.Guid)">
+            <summary>
+            Get request
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.GetRequests(System.Int32,System.Int32)">
+            <summary>
+            Get requests
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.GetRequestsByBorrowerId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get requests by borrower id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.GetRequestsByRequesterId(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            Get requests by requester id
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequestController.UpdateRequest(System.Guid,lab_dotnet.WebAPI.Models.UpdateRequestRequest)">
+            <summary>
+            Update request
+            </summary>
+        </member>
+        <member name="T:lab_dotnet.WebAPI.Controllers.RequesterController">
+            <summary>
+            Requester endpoints
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequesterController.#ctor(lab_dotnet.Services.Abstract.IRequesterService,AutoMapper.IMapper)">
+            <summary>
+            Requester controller
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequesterController.CreateRequester(lab_dotnet.WebAPI.Models.RequesterRequest)">
+            <summary>
+            Create requester
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequesterController.DeleteRequester(System.Guid)">
+            <summary>
+            Delete requester
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequesterController.GetRequester(System.Guid)">
+            <summary>
+            Get requester
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequesterController.GetRequesters(System.Int32,System.Int32)">
+            <summary>
+            Get requesters
+            </summary>
+        </member>
+        <member name="M:lab_dotnet.WebAPI.Controllers.RequesterController.UpdateRequester(System.Guid,lab_dotnet.WebAPI.Models.UpdateRequesterRequest)">
+            <summary>
+            Update requester
+            </summary>
+        </member>
+    </members>
+</doc>

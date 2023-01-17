@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NoWarn>8618</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lab_dotnet.Entities\lab_dotnet.Entities.csproj" />
+    <ProjectReference Include="..\lab_dotnet.Exceptions\lab_dotnet.Exceptions.csproj" />
+    <ProjectReference Include="..\lab_dotnet.Repository\lab_dotnet.Repository.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Duende.IdentityServer" Version="6.2.0" />
+  </ItemGroup>
+</Project>
